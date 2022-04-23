@@ -143,6 +143,40 @@ const cvFormatter = (arr) => {
 
 const applicationsStatics = (arr) => {
   // write your code here
+  const resutlsObj = {
+    python_devs: 0,
+    javaScript_devs: 0,
+    dotNet_devs: 0,
+    java_devs: 0,
+    totalApplicants: 0,
+    rejectedApplicants: 0,
+  };
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].yearsOfExperience <= 1) {
+      resutlsObj.rejectedApplicants++;
+    } else if (!(arr[i].firstName || arr[i].lastName)) {
+      resutlsObj.rejectedApplicants++;
+    }
+    switch (arr[i].tech) {
+      case "JS":
+        resutlsObj.javaScript_devs++;
+        resutlsObj.totalApplicants++;
+        break;
+      case "Java":
+        resutlsObj.java_devs++;
+        resutlsObj.totalApplicants++;
+        break;
+      case ".Net":
+        resutlsObj.dotNet_devs++;
+        resutlsObj.totalApplicants++;
+        break;
+      case "Python":
+        resutlsObj.python_devs++;
+        resutlsObj.totalApplicants++;
+        break;
+    }
+  }
+  return resutlsObj;
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -253,7 +287,7 @@ let data = {
 //  2- You need to round the average to the nearest lower number
 
 const classesAvg = (data) => {
-  // write your code here
+  // write your code here``
 };
 // -------------------------------------------------------------------------------------------------------
 
