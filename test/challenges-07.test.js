@@ -1,6 +1,5 @@
 "use strict";
 
-
 const {
   objLat,
   cvFormatter,
@@ -245,7 +244,7 @@ describe("Challenge07", () => {
 });
 
 describe("Challenge07", () => {
-  test.skip("cv_filter", () => {
+  test("cv_filter", () => {
     let received = {
       python_devs: 1,
       javaScript_devs: 2,
