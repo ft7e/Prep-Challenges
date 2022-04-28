@@ -24,7 +24,22 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function birthdayCakeCandles(candles) {
+    // Write your code here
+    let max = 0;
+    let counter = 0;
+    for(let i = 0; i< candles.length; i++){
+        if (candles[i] > max){
+            max = candles[i];
+        }
+    }
+     for(let i = 0; i< candles.length; i++){
+        if (candles[i] == max){
+            counter++;
+        }
+}
+return counter;
+};"
             ],
             "outputs": []
         },
