@@ -75,6 +75,15 @@ const oddFiltration = (arr) => {
 
 const cvsFiltration = (arr) => {
   // write your code here
+  let arr2 = [];
+  arr.forEach((element) => {
+    const obj = {
+      fullName: element.firstName + " " + element.LastName,
+      tech: element.tech,
+    };
+    if (obj.tech === "JS" && element.yearsOfExperience >= 4) arr2.push(obj);
+  });
+  return arr2;
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -90,7 +99,13 @@ const cvsFiltration = (arr) => {
 
 const vowelsFiltration = (arr) => {
   // write your code here
+  const regex = /[aeoui]/;
+  let arr2 = arr.filter((element) => {
+    return !regex.test(element);
+  });
+  return arr2;
 };
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -112,6 +127,13 @@ const vowelsFiltration = (arr) => {
 
 const skillComparison = (arr1, arr2) => {
   // write your code here
+  let arr4 = [];
+
+  let arr3 = arr1.filter((element, index) => {
+    if (!arr1.includes(arr2[index])) arr4.push(arr2[index]);
+    return !arr2.includes(element);
+  });
+  return [...arr3, ...arr4];
 };
 // -------------------------------------------------------------------------------------------------------
 
