@@ -40,6 +40,11 @@ const arrInc = (arr) => {
 //
 const roundDecimals = (arr) => {
   // write your code here
+  let arr2 = [];
+  arr.forEach((element) => {
+    arr2.push(Math.round(element));
+  });
+  return arr2;
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -109,6 +114,14 @@ const roundDecimals = (arr) => {
 
 const employeesBonus = (arr) => {
   // write your code here
+  arr.forEach((element) => {
+    let salaryNum = Number(element.salary.slice(0, -1));
+    if (element.workHours > 8) element.salary = salaryNum + 100 + "$";
+    else {
+      element.salary = salaryNum + 50 + "$";
+    }
+  });
+  return arr;
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -129,6 +142,17 @@ const employeesBonus = (arr) => {
 
 const mostExpensive = (budget, mouseArray, keyBoardArray) => {
   // write your code here
+  let results = [];
+  let max = 0;
+  mouseArray.forEach((element) => {
+    keyBoardArray.forEach((item) => {
+      results.push(item + element);
+    });
+  });
+  results.forEach((element) => {
+    if (element > max && element <= budget) max = element;
+  });
+  return max;
 };
 // -------------------------------------------------------------------------------------------------------
 
