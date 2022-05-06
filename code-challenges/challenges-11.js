@@ -134,10 +134,10 @@ function gradesAvg(arr) {
     }
     return sum / array.length;
   };
-  const arr2 = arr.map((element) => calAVG(element.gradsList));
-  for (const [index, element] of arr.entries()) {
-    element.avg = arr2[index];
-  }
+  let arr2 = arr.map((element) => {
+    return (element.avg = calAVG(element.gradsList));
+  });
+
   return arr;
 }
 // -------------------------------------------------------------------------------------------------------
