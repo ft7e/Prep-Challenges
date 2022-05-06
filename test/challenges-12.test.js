@@ -1,4 +1,3 @@
-
 const {
   oddFiltration,
   cvsFiltration,
@@ -23,7 +22,7 @@ describe("Challenge12-01", () => {
 });
 
 describe("Challenge12-02", () => {
-  test.skip("cvsFiltration", () => {
+  test("cvsFiltration", () => {
     let cvs1 = [
       {
         firstName: "Jason",
@@ -90,7 +89,7 @@ describe("Challenge12-02", () => {
 });
 
 describe("Challenge12-03", () => {
-  test.skip("words_without_vowels", () => {
+  test("words_without_vowels", () => {
     expect(vowelsFiltration(["car", "spy", "dry"])).toEqual(["spy", "dry"]);
     expect(vowelsFiltration(["boy", "building", "why"])).toEqual(["why"]);
     expect(vowelsFiltration(["sad", "angry", "lovely", "fresh"])).toEqual([]);
@@ -98,7 +97,7 @@ describe("Challenge12-03", () => {
 });
 
 describe("Challenge12-04", () => {
-  test.skip("employee_skill_comparison", () => {
+  test("employee_skill_comparison", () => {
     let em1 = ["C", "C#", "Java", "Angular", "PHP"];
     let em2 = ["C#", ".Net", "JavaScript", "React", "Angular"];
 
