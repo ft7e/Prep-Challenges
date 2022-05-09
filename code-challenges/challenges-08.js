@@ -61,6 +61,11 @@ const customerAndAge = (obj) => {
 
 const getEntries = (obj) => {
   // write your code here
+  let arr = [];
+  for (const [key, value] of Object.entries(obj)) {
+    arr.push(`${key}: ${value}`);
+  }
+  return arr;
 };
 // -------------------------------------------------------------------------------------------------------
 
