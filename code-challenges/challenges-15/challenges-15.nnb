@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Equality In An Array](https://www.hackerrank.com/challenges/equality-in-a-array/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function equalizeArray(arr) {\n    // Write your code here\n    let maxCounter = 0;\n    \n    \n    for (let j = 0; j < arr.length; j++){\n        let counter = 1;\n        for(let i = j+1; i < arr.length; i++){\n            if (arr[j] == arr[i]) counter++;\n        }\n        if (counter > maxCounter) maxCounter = counter;\n    }\n    return arr.length - maxCounter;\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Halloween Sale](https://www.hackerrank.com/challenges/halloween-sale/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function howManyGames(k, d, m, s) {\n  // Write your code here\n    let totalCost = k;\n    let gameCount = 0;\n    \n    while(totalCost <= s){\n      k = k - d;\n      if(k <= m){\n        totalCost = totalCost + m;\n        gameCount++;\n      }else{\n        totalCost = totalCost + k;\n        gameCount++;\n      }\n      \n    }\n    \n    return gameCount;\n  }"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Sherlock And Squares](https://www.hackerrank.com/challenges/sherlock-and-squares/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function squares(a, b) {\n    // Write your code here\n    let lower= Math.ceil(Math.sqrt(a))\n\n    let higher = Math.floor(Math.sqrt(b))\n\n\n\n    if(lower>higher)\n\n    return 0\n\n\n\n   let count=0;\n\n   for(let i =lower ;i<=higher ;i++){\n\n       if (lower<=i*i<=higher){\n\n           count++\n\n       }\n\n   }\n\n   \n\n   return count\n\n\n\n}"
+            ],
+            "outputs": []
+        }
+    ]
+}
