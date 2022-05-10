@@ -63,16 +63,9 @@ const getEntries = (obj) => {
   // write your code here
   let arr = [];
   for (const [key, value] of Object.entries(obj)) {
-    arr.push(`${key}:${value}`);
+    arr.push(`${key}: ${value}`);
   }
   return arr;
-  switch (key) {
-    case value:
-      break;
-
-    default:
-      break;
-  }
 };
 // -------------------------------------------------------------------------------------------------------
 
